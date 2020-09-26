@@ -45,12 +45,14 @@ class Game{
                  var index =0;
                  drawSprites();
                  var displayPosition=50;
+                 var sy = 20;
                  for(var plr in allPlayers){
                     
                      displayPosition +=50;
                      index = index+1;
                      x = 500-allPlayers[plr].distance;
                      y=500;
+                     sy = sy + 30;
                      
                      players[index -1].x = x;
                      players[index - 1].y = y;
@@ -64,6 +66,9 @@ class Game{
                          
                      }
                   
+                     fill("white");
+                     textSize(25);
+                     text("Player :" + index + allPlayers[plr].score, 100, sy);
                  
                  }
                 
@@ -111,8 +116,6 @@ class Game{
                          }
                      }
                   }
-                
-
          
          
         
